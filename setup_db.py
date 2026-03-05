@@ -1,11 +1,11 @@
 import sqlite3
 import os
 
-# Definiamo dove creare il file del database (nella cartella instance)
-if not os.path.exists("instance"):
-    os.makedirs("instance")
+# Creiamo la cartella instance dentro video-app
+if not os.path.exists("video-app/instance"):
+    os.makedirs("video-app/instance")
 
-db_path = os.path.join("instance", "board_games.sqlite")
+db_path = os.path.join("video-app/instance", "board_games.sqlite")
 
 # Ci connettiamo (se il file non esiste, lo crea)
 connection = sqlite3.connect(db_path)
